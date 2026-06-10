@@ -3,6 +3,17 @@ import csv
 listas_paises = []
 opcion = 0
 
+def filtrar_por_continente(lista):
+    print("Acá va la lógica del filtro...")
+    if len(lista) == 0:
+        print("Error: Primero debe cargar los datos con la opción 1")
+        return
+
+    continente_buscado = input("Ingrese el continente a filtrar: ").strip().lower()
+
+    for pais in lista:
+        if pais["continente"].lower() == continente_buscado:
+            print("Datos del país encontrados:", pais)
 
 def cargar_datos(lista):
     try:
@@ -38,7 +49,7 @@ while opcion != 7:
         if opcion == 1:
             cargar_datos(listas_paises)
         elif opcion == 2:  
-            print("Próximamente opción 2...")
+            filtrar_por_continente(listas_paises)
         elif opcion == 3:  
             print("Próximamente opción 3...")
         elif opcion == 4:  
