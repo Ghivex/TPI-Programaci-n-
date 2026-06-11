@@ -3,6 +3,53 @@ import csv
 listas_paises = []
 opcion = 0
 
+def ordenar_paises(lista):
+
+    print("Ordenar por: ")
+    print("1. Nombre")
+    print("2.Poblacion")
+    print("3.Superficie ")
+
+    opcion1 = input("Elegi opcion: (1/2/3)")
+
+    print("Orden: ")
+    print("1. Ascendente")
+    print("2. Descendente")
+
+    orden = input("Elegi orden: ")
+
+    n = len(lista) #tamaño de la lista (cuantos hay)
+
+    for i in range(n): #se repite segun el tamaño de lista 
+        for j in range(0, n - 1 -i): #metodo burbuja #compara de a pares j = actual j+1 = siguiente
+
+            if opcion1 == "1":
+                a = lista[j]["nombre"] #lista actual j
+                b = lista[j + 1]["nombre"] #lista siguiente j + 1
+
+            elif opcion1 == "2":
+                a = int(lista[j]["poblacion"])
+                b = int(lista[j + 1]["poblacion"])
+
+            elif opcion1 == "3":
+                a = float(lista[j]["superficie"])
+                b = float(lista[j + 1]["superficie"])
+            else:
+                print("Opcion invalida")
+                return
+            
+            if (orden == "1" and a > b) or (orden == "2" and a < b): #si es ascendente(1) intercambia a > b o descendente(2) a < b
+               #intercambio de posiciones
+                aux = lista[j]  #guardo valor de lista[j] en variable temporal
+                lista[j] = lista [j+ 1] #reemplaza lista[j] con el contenido lista[j+1]
+                lista[j + 1] = aux   ##coloca el valor guardado dentro de lista[j+1]
+        
+        print("Lista ordenada: ")
+        for pais in lista:
+            print(pais)
+
+
+
 def filtrar_por_continente(lista):
     print("Acá va la lógica del filtro...")
     if len(lista) == 0:
@@ -51,7 +98,7 @@ while opcion != 7:
         elif opcion == 2:  
             filtrar_por_continente(listas_paises)
         elif opcion == 3:  
-            print("Próximamente opción 3...")
+            ordenar_paises(listas_paises)
         elif opcion == 4:  
             print("Próximamente opción 4...")
         elif opcion == 5:  
