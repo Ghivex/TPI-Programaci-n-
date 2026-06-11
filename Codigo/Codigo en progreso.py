@@ -1,3 +1,4 @@
+
 import csv
 
 listas_paises = []
@@ -10,9 +11,9 @@ def ordenar_paises(lista):
     print("2.Poblacion")
     print("3.Superficie ")
 
-    opcion1 = input("Elegi opcion: (1/2/3)")
+    opcion1 = input("Elegi opcion: (1/2/3): ")
 
-    print("Orden: ")
+    print("Orden: (1/2)")
     print("1. Ascendente")
     print("2. Descendente")
 
@@ -43,10 +44,11 @@ def ordenar_paises(lista):
                 aux = lista[j]  #guardo valor de lista[j] en variable temporal
                 lista[j] = lista [j+ 1] #reemplaza lista[j] con el contenido lista[j+1]
                 lista[j + 1] = aux   ##coloca el valor guardado dentro de lista[j+1]
-        
-        print("Lista ordenada: ")
-        for pais in lista:
-            print(pais)
+               
+
+    print("Lista ordenada: ")
+    for pais in lista:
+        print(pais)
 
 
 
