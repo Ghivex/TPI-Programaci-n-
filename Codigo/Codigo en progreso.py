@@ -4,6 +4,27 @@ import csv
 listas_paises = []
 opcion = 0
 
+def  buscar_pais(lista):
+    if len(listas_paises) == 0:
+        print("Primero debes cargar los datos")
+        return
+
+    nombre_buscado = input("Ingrese el nombre del pais: ").strip().lower() #para que saque espacios y pase a minusculas
+    encontrado = False  # Para saber si lo encontramos o no 
+
+    for pais in lista: #recorre cada pais
+        if pais["nombre"].lower() == nombre_buscado:  #si pais "nombre" es igual al nombre buscado..
+            print("Pais encontrado: ")
+            print(f"Nombre: {pais['nombre']}")
+            print(f"Poblacion: {pais['poblacion']}")
+            print(f"Superficie: {pais['superficie']}")
+            print(f"Continente: {pais['continente']}")
+            encontrado = True  #Si encotramos True
+
+    if encontrado == False:  #Si no encontramos False
+        print("No se encontro el pais")
+    
+
 def ordenar_paises(lista):
 
     print("Ordenar por: ")
@@ -102,7 +123,7 @@ while opcion != 7:
         elif opcion == 3:  
             ordenar_paises(listas_paises)
         elif opcion == 4:  
-            print("Próximamente opción 4...")
+            buscar_pais(listas_paises)
         elif opcion == 5:  
             print("Próximamente opción 5...")
         elif opcion == 6: 
