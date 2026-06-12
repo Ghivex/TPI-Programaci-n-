@@ -4,6 +4,17 @@ import csv
 listas_paises = []
 opcion = 0
 
+
+def salir_sistema(lista):
+    print("Cerrando sesion...")
+    print("...")
+    print("...")
+    print("Sesion cerrada")
+    
+    
+
+
+
 def mostrar_estadisticas(lista):
 
     if len(lista) == 0:   #validar datos, si esta vacia cargar datos 
@@ -33,7 +44,7 @@ def mostrar_estadisticas(lista):
         contador += 1 #el contador cuenta los paises recorridos
 
 
-        cont = pais["continente"] #guarda el continente del pais actual en la varuable cont
+        cont = pais["continente"] #guarda el continente del pais actual en la variable cont
         if cont in continentes: #verifica si el continente existe ya en continentes
             continentes[cont] += 1  #si el continente ya existe suma 1
         else:
@@ -180,7 +191,8 @@ while opcion != 7:
         elif opcion == 6: 
             print("Próximamente opción 6...")
         elif opcion == 7: 
-            print("Saliendo del sistema... ")
+            salir_sistema(listas_paises)
+            break
         else: 
             print("Opción inválida. Elija un número del 1 al 7.")
             
