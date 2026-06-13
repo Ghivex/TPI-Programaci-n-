@@ -1,4 +1,4 @@
-from archivos import cargar_datos
+from archivos import cargar_datos, exportar_reporte
 from consultas import filtrar_por_continente, ordenar_paises, buscar_pais, agregar_pais, actualizar_pais
 from estadisticas import mostrar_estadisticas
 
@@ -40,7 +40,7 @@ while opcion != 9:
         elif opcion == 5:  
             mostrar_estadisticas(listas_paises)
         elif opcion == 6: 
-            print("Próximamente opción 6...")
+            exportar_reporte(listas_paises)
         elif opcion == 7:
             agregar_pais(listas_paises)
         elif opcion == 8:

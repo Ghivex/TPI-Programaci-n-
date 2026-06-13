@@ -19,3 +19,18 @@ def cargar_datos(lista):
 
     except FileNotFoundError:
         print("Error: No se encontró el archivo 'paises.csv' en la carpeta raíz.")
+        
+
+def exportar_reporte(lista):
+    try:
+        with open("paises.csv", "w") as archivo:  #abrimos el archivo en modo escritura (w)
+            archivo.write("nombre,poblacion,superficie,continente\n") #primera fila
+            
+            for pais in lista:  #recorremos la lista
+                linea = (f"{pais['nombre']},{pais['poblacion']},{pais['superficie']}, {pais['continente']}\n")  #convertimos el diccionario en texto y agregamos con write
+                archivo.write(linea)
+
+        print("Reporte exportado correctamente")
+
+    except:
+        print("Error al exportar el archivo")
