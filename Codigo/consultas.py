@@ -1,5 +1,4 @@
 def filtrar_por_continente(lista):
-    print("Acá va la lógica del filtro...")
     if len(lista) == 0:
         print("Error: Primero debe cargar los datos con la opción 1")
         return
