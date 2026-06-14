@@ -49,7 +49,7 @@ while opcion != 9:
             salir_sistema(listas_paises)
             break
         else: 
-            print("Opción inválida. Elija un número del 1 al 7.")
+            print("Opción inválida. Elija un número del 1 al 9.")
             
     except ValueError:
-        print("Error: Por favor, ingrese un número entero del 1 al 7.")
+        print("Error: Por favor, ingrese un número entero del 1 al 9.")
