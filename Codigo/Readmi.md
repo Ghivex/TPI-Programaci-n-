@@ -1,7 +1,7 @@
 ##Trabajo práctico integrador de programacion realizado por estudiantes de Programación 1:
 #Nahuel Sandoval y Micaela Ibarra
 
-##Enlace al video: 
+##Enlace al video: https://www.youtube.com/watch?v=mr3SiS-lt1U
 ##Enlace al repositorio: https://github.com/Ghivex/TPI-Programaci-n-.git
 
 ##El código está dividido en módulos para una mejor organización:
